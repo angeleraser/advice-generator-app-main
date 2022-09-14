@@ -1,0 +1,178 @@
+@import url("./reset-min.css");
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  --font-manrope: "Manrope", sans-serif;
+}
+
+.app {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 360px;
+  width: 100%;
+  padding: 16px;
+  background-color: var(--dark-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.advice-card,
+.advice-card-skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark-grayish-blue);
+  padding: 40px 26px;
+  border-radius: 16px;
+  font-family: var(--font-manrope);
+  width: 100%;
+  max-width: 546px;
+  position: relative;
+}
+
+.advice-card.loading {
+  display: none;
+}
+
+.advice-id {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.advice-text {
+  margin: 32px 0;
+  text-align: center;
+  color: var(--light-cyan);
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+.advice-divider {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.advice-divider-comma {
+  display: inline-block;
+  flex-shrink: 0;
+  height: 14px;
+  margin: 0 16px;
+}
+
+.advice-divider::after,
+.advice-divider::before,
+.advice-divider-comma::after,
+.advice-divider-comma::before {
+  background-color: var(--light-cyan);
+  content: "";
+  display: inline-block;
+}
+
+.advice-divider::after,
+.advice-divider::before {
+  height: 1px;
+  width: calc(50% - 17px);
+  opacity: 0.25;
+}
+
+.advice-divider-comma::after {
+  margin-left: 5px;
+}
+
+.advice-divider-comma::after,
+.advice-divider-comma::before {
+  border-radius: 4px;
+  height: 100%;
+  width: 6px;
+}
+
+.new-advice-button {
+  background-color: var(--neon-green);
+  outline: none;
+  border: none;
+  display: inline-flex;
+  padding: 20px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  translate: 0 50%;
+  transition: box-shadow 0.3s;
+}
+
+.new-advice-button:hover {
+  box-shadow: 0 0 20px var(--neon-green);
+}
+
+.advice-card-skeleton {
+  display: none;
+}
+
+.advice-card.loading + .advice-card-skeleton {
+  display: flex;
+}
+
+.advice-card-skeleton .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.advice-card-skeleton .text .line:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.advice-card-skeleton .line {
+  height: 12px;
+  margin-bottom: 6px;
+  border-radius: 2px;
+  background: rgba(130, 130, 130, 0.1);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(8%, rgba(130, 130, 130, 0.2)),
+    color-stop(18%, rgba(130, 130, 130, 0.3)),
+    color-stop(33%, rgba(130, 130, 130, 0.2))
+  );
+  background: linear-gradient(
+    to right,
+    rgba(130, 130, 130, 0.2) 8%,
+    rgba(130, 130, 130, 0.3) 18%,
+    rgba(130, 130, 130, 0.2) 33%
+  );
+  background-size: 800px 100px;
+  animation: wave-lines 2s infinite ease-out;
+  width: 100%;
+}
+
+@keyframes wave-lines {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}

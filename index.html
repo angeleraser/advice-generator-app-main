@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Frontend Mentor | Advice generator app</title>
+  </head>
+  <body>
+    <div class="app">
+      <blockquote id="advice-card" class="advice-card">
+        <h1 id="advice-id" class="advice-id">
+          <span> Advice #117 </span>
+        </h1>
+
+        <p id="advice-text" class="advice-text">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis odit
+          minus laboriosam omnis."
+        </p>
+
+        <div class="advice-divider">
+          <span class="advice-divider-comma"></span>
+        </div>
+
+        <button id="new-advice-btn" class="new-advice-button">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"
+              fill="#202733"
+            />
+          </svg>
+        </button>
+      </blockquote>
+
+      <div class="advice-card-skeleton">
+        <div style="width: 25%" class="line"></div>
+
+        <div class="text">
+          <div style="width: 60%" class="line"></div>
+          <div style="width: 80%" class="line"></div>
+          <div style="width: 80%" class="line"></div>
+          <div style="width: 70%" class="line"></div>
+          <div style="width: 60%" class="line"></div>
+        </div>
+
+        <div style="width: 90%" class="line"></div>
+      </div>
+
+      <div style="display: none" class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/angeleraser">angeleraser</a>.
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
