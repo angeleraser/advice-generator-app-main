@@ -115,20 +115,27 @@ html,
   width: 6px;
 }
 
-.new-advice-button {
+.quote-actions {
+  position: absolute;
+  bottom: 0;
+  translate: 0 50%;
+}
+
+.advice-button {
   background-color: var(--neon-green);
   outline: none;
   border: none;
   display: inline-flex;
   padding: 20px;
   border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  translate: 0 50%;
   transition: box-shadow 0.3s;
 }
 
-.new-advice-button:hover {
+.advice-button:last-child {
+  margin-left: 18px;
+}
+
+.advice-button:hover {
   box-shadow: 0 0 20px var(--neon-green);
 }
 
