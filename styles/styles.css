@@ -9,6 +9,11 @@
   --font-manrope: "Manrope", sans-serif;
 }
 
+html,
+.app {
+  background-color: var(--dark-blue);
+}
+
 .app {
   align-items: center;
   display: flex;
@@ -19,16 +24,19 @@
   min-width: 360px;
   width: 100%;
   padding: 16px;
-  background-color: var(--dark-blue);
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 14px;
+  color: var(--light-cyan);
+  font-family: var(--font-manrope);
   text-align: center;
+  margin-top: 96px;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--neon-green);
+  font-weight: 500;
 }
 
 .advice-card,
