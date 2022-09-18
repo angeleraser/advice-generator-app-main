@@ -3,6 +3,7 @@ const adviceIdEl = document.getElementById("advice-id");
 const adviceTextEl = document.getElementById("advice-text");
 const newAdviceBtn = document.getElementById("new-advice-btn");
 const copyAdviceBtn = document.getElementById("copy-advice-btn");
+const translateAdviceBtn = document.getElementById("translate-advice-btn");
 
 const defaultAdvice = {
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis odit minus laboriosam omnis.",
@@ -41,9 +42,19 @@ const handleGenerateAdvice = async () => {
 
 const handleCopyAdvice = () => {
   navigator.clipboard.writeText(currentAdviceText);
-  alert("Advice copied to clipboard!");
+  alert("Copied to clipboard!");
+};
+
+const handleTranslate = () => {
+  window.open(
+    `https://translate.google.com/?sl=en&tl=es&text=${encodeURI(
+      currentAdviceText
+    )}&op=translate`,
+    "_blank"
+  );
 };
 
 handleGenerateAdvice();
 newAdviceBtn.addEventListener("click", handleGenerateAdvice);
 copyAdviceBtn.addEventListener("click", handleCopyAdvice);
+translateAdviceBtn.addEventListener("click", handleTranslate);

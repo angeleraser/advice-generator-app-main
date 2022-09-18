@@ -131,8 +131,8 @@ html,
   transition: box-shadow 0.3s;
 }
 
-.advice-button:last-child {
-  margin-left: 18px;
+.advice-button:not(:last-child) {
+  margin-right: 18px;
 }
 
 .advice-button:hover {
